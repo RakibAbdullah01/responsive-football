@@ -5,11 +5,6 @@
      font-family: 'Poppins', sans-serif;
      margin: 0;
  }
- 
- .container {
-     width: 1050px;
-     margin: 0 auto;
- }
  /* Hero Section Style*/
  
  .hero {
@@ -82,7 +77,6 @@
  .ranker {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
-     margin: 50px;
  }
  
  .ranker-photo {
@@ -97,19 +91,19 @@
  
  .ranker-info {
      padding: 30px;
-     background-color: gray;
+     background-color: cyan;
  }
  /* Players Section Style */
  
  .players {
-     margin: 70px 0;
+     margin: 70px 150px;
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-row-gap: 30px;
+     grid-column-gap: 30px;
  }
  
  .player {
-     width: 300px;
      padding: 15px;
      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
  }
@@ -142,7 +136,7 @@
  /* Footer Section Style */
  
  footer {
-     margin: 60px 0;
+     margin: 60px 0 10px 0;
  }
  
  .footer-items {
@@ -170,4 +164,45 @@
  .copyright p {
      font-size: 18px;
      font-weight: 400;
+ }
+ /* Responsive  */
+ /* For Mobile Screen */
+ 
+ @media (max-width:668px) {
+     .hero-content {
+         flex-direction: column;
+     }
+     .title {
+         margin-bottom: 100px;
+     }
+     .ranker {
+         grid-template-columns: repeat(1, 1fr);
+     }
+     .players {
+         grid-template-columns: repeat(1, 1fr);
+         margin: 70px 40px;
+     }
+     .player {
+         width: 100%
+     }
+ }
+ 
+ @media (min-width:689px) and (max-width:992px) {
+     .hero-content {
+         flex-direction: column;
+     }
+     .title {
+         margin-bottom: 100px;
+     }
+     .ranker {
+         grid-template-columns: repeat(1, 1fr);
+     }
+     .players {
+         grid-template-columns: repeat(2, 1fr);
+         grid-column-gap: 40px;
+         margin: 70px 40px;
+     }
+     .player {
+         width: 100%
+     }
  }
